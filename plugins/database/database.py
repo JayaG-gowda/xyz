@@ -9,7 +9,22 @@ class Database:
         self._client = pymongo.MongoClient(uri)
         self.db = self._client[database_name]
         self.col = self.db.users
+        self.col = self.db.teams
 
+    # Team things
+    def new_team(self, id, names):
+        return dict(
+            id=id,
+            join_date=datetime.date.today().isoformat(),
+            team_members=names
+        )
+
+    async def add_team(self, id, names):
+        team = self.new_user(id, names)
+        await self.col.insert_one(team)
+
+
+    # Users things
     def new_user(self, id):
         return dict(
             id=id,
@@ -18,7 +33,7 @@ class Database:
             upload_as_doc=False,
             thumbnail=None
         )
-
+        
     async def add_user(self, id):
         user = self.new_user(id)
         await self.col.insert_one(user)
