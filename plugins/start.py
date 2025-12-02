@@ -21,9 +21,9 @@ async def start_command(client: Client, message: Message):
     if not await db.is_user_exist(id):
         try:
             #add public channel username
-            await client.send_message(chat_id = "UserName",
-                             text = f"<b>#𝐍𝐞𝐰𝐔𝐬𝐞𝐫: \n\n᚛› 𝐈𝐃 - <code>{message.from_user.id}</code> \n᚛› 𝐍𝐚𝐦𝐞 - <a href= tg://user?id={message.from_user.id}>{message.from_user.first_name}</a></b>"
-                              )
+            # await client.send_message(chat_id = "UserName",
+            #                  text = f"<b>#𝐍𝐞𝐰𝐔𝐬𝐞𝐫: \n\n᚛› 𝐈𝐃 - <code>{message.from_user.id}</code> \n᚛› 𝐍𝐚𝐦𝐞 - <a href= tg://user?id={message.from_user.id}>{message.from_user.first_name}</a></b>"
+            #                   )
             await db.add_user(id)
         except:
             pass   
