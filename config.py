@@ -37,7 +37,7 @@ class Config(object):
 
     DOWNLOAD_LOCATION = "./DOWNLOADS"
 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+    # LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
     
     #DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))
 
