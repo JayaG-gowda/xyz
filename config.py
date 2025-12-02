@@ -18,12 +18,12 @@ class Config(object):
 
     #BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6100891233:AAEPZ22I2sI3IPVWDcsAC1X3Ydf1XqM6qvA") #testing bot 1 (ghfjg)
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5869954207:AAG2sJbYvKujDQd2GFoiQxF0T5L41hdvNME") #testing bot 1 (mj btn)
     #BOT_TOKEN = os.environ.get("BOT_TOKEN", "5872747581:AAHVN_3OP9uffBCKdesYZXFigzVuRYWLYOY") #testing bot 2 (url_v3)
     
-    API_ID = int(os.environ.get("API_ID", ""))
+    API_ID = int(os.environ.get("API_ID", "3393749"))
 
-    API_HASH = os.environ.get("API_HASH", "")
+    API_HASH = os.environ.get("API_HASH", "a15a5954a1db54952eebd08ea6c68b71")
 
     OWNER_ID = int(os.environ.get("OWNER_ID", "1061576483")) #me legend580
     
