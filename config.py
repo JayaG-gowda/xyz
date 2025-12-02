@@ -41,7 +41,7 @@ class Config(object):
     
     #DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))
 
-    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://cs:cs@cluster0.ecpmvsv.mongodb.net/?appName=Cluster0")
+    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://cs:cs@cluster0.ecpmvsv.mongodb.net/?retryWrites=true&w=majority")
 
     DATABASE_NAME = os.environ.get("DATABASE_NAME", "CS")
     
