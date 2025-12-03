@@ -9,7 +9,7 @@ class Database:
         self._client = pymongo.MongoClient(uri)
         self.db = self._client[database_name]
         self.col = self.db.users
-        self.col = self.db.teams
+        self.tea = self.db.teams
 
     # Team things
     def new_team(self, id, names):
@@ -21,7 +21,7 @@ class Database:
 
     async def add_team(self, id, names):
         team = self.new_user(id, names)
-        await self.col.insert_one(team)
+        await self.tea.insert_one(team)
 
 
     # Users things
