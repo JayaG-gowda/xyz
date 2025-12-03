@@ -12,17 +12,12 @@ class Database:
         self.tea = self.db.teams
 
     # Team things
-    def new_team(self, id, names):
+    def new_team(self):
         return dict(
-            id=id,
-            join_date=datetime.date.today().isoformat(),
-            team_members=names
+            places=['xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz'],
+            team_members=['xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz'],
+            hints=['xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz']
         )
-
-    async def add_team(self, id, names):
-        team = self.new_user(id, names)
-        await self.tea.insert_one(team)
-
 
     # Users things
     def new_user(self, id):
@@ -40,6 +35,7 @@ class Database:
 
     async def is_user_exist(self, id):
         user = self.col.find_one({'id': int(id)})
+        await self.tea.insert_one(self.new_team())  #only for 1 time use
         return bool(user)
 
     async def total_users_count(self):
