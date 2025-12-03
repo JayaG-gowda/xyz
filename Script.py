@@ -29,18 +29,17 @@ class script(object):
  ‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ1.0.1 [sᴛᴀʙʟᴇ]</b>"""
 
     HELP_TEXT = """
-    <b>𒊹︎︎︎ Help text</b>
+    <b>𒊹︎︎︎ Contact details</b>
     
-     ➪ .
-        【i】  Send your bot first and second name (eg:- <code>Sharath N</code> )
-        【ii】
-     ➪ 
+     ➪ Jayanna G   - 9019646305
+     ➪ Athishay    - 9972156903
+     ➪ Harshitha   - 6361673855
 
      """
     
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Help 🫂', callback_data='help'),
+        InlineKeyboardButton('Contact 🫂', callback_data='help'),
         InlineKeyboardButton('🧑‍🎓 About🧑‍🎓', callback_data='about')
         ],[
         InlineKeyboardButton('🔒 Close', callback_data='close')
@@ -57,7 +56,7 @@ class script(object):
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🔙 Back', callback_data='home'),
-        InlineKeyboardButton('Help 🫂', callback_data='help')
+        InlineKeyboardButton('Contact 🫂', callback_data='help')
         ],[
         InlineKeyboardButton('🔒 Close', callback_data='close')
         ]]
