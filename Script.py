@@ -12,7 +12,7 @@ class script(object):
 
     ABOUT_TXT = """<b>⍟───[ MY ᴅᴇᴛᴀɪʟꜱ ]───⍟
     
- ‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/group_30_robot>Cᴏʟʟᴇɢᴇ Fᴇꜱᴛ Bᴏᴛ</a>
+ ‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/group_30_robot>𝐇𝐮𝐧𝐭𝐞𝐫</a>
  
  ‣ My best friend : <a href='tg://settings'>Tʜɪs Pᴇʀsᴏɴ</a> 
  
@@ -23,8 +23,6 @@ class script(object):
  ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a> 
  
  ‣ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>Mᴏɴɢᴏ ᴅʙ</a> 
- 
- ‣ ʙᴏᴛ sᴇʀᴠᴇʀ : <a href='https://heroku.com'>Heroku</a> 
  
  ‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ1.0.1 [sᴛᴀʙʟᴇ]</b>"""
 
