@@ -1,4 +1,4 @@
-#Coded by KA18 the @legend580 💛❤️
+#Coded by the @legend580 💛❤️
 
 import pyrogram
 from bot import Bot
