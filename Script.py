@@ -4,9 +4,8 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 class script(object):
     START_MSG = """<b>🤗 Hello {},
-ɪ ᴀᴍ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ,
-
-ɪꜰ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴛʜᴀᴛ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ ᴛʜᴇɴ ᴄʟɪᴄᴋ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>"""
+ɪ ᴀᴍ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪꜰʏ ᴀ ᴄʟᴜᴇ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ ᴛʜᴇ ᴘʟᴀʏᴇʀꜱ ᴏꜰ ᴛʜᴇ ᴛʀᴇᴀꜱᴜʀᴇ ʜᴜɴᴛ ᴛᴇᴀᴍ.
+ɪꜰ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴛʜᴀᴛ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴄᴏɴᴛᴀᴄᴛ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>"""
 
     WAIT_MSG = """"<b>Processing ...</b>"""
 
