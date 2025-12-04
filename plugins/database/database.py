@@ -35,7 +35,7 @@ class Database:
 
     async def is_user_exist(self, id):
         user = self.col.find_one({'id': int(id)})
-        await self.tea.insert_one(self.new_team())  #only for 1 time use
+        # await self.tea.insert_one(self.new_team())  #only for 1 time use
         return bool(user)
 
     async def total_users_count(self):
