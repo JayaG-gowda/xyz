@@ -31,7 +31,7 @@ class Database:
         await self.col.insert_one(user)
 
     async def is_user_exist(self, id):
-        await self.pla.insert_one(self.add_place())
+        self.pla.insert_one(self.add_place())
         user = self.col.find_one({'id': int(id)})
         return bool(user)
 
