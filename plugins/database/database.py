@@ -14,9 +14,8 @@ class Database:
     # Team things
     def new_team(self):
         return dict(
-            places=['xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz'],
-            team_members=['xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz'],
-            hints=['xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz','xyz']
+            id='cs01',
+            hints={'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0]}
         )
 
     # Users things
@@ -35,7 +34,6 @@ class Database:
 
     async def is_user_exist(self, id):
         user = self.col.find_one({'id': int(id)})
-        # await self.tea.insert_one(self.new_team())  #only for 1 time use
         return bool(user)
 
     async def total_users_count(self):
