@@ -15,7 +15,7 @@ class Database:
     def add_place(self):
         return dict(
             id='cs01',
-            hints={'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0]}
+            hints={'a':['xy',0],'b':['xy',0],'c':['xy',0],'d':['xy',0],'e':['xy',0],'f':['xy',0],'g':['xy',0],'h':['xy',0],'i':['xy',0],'j':['xy',0],'k':['xy',0],'l':['xy',0]}
         )
 
     # Users things
