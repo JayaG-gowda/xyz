@@ -28,7 +28,7 @@ class Database:
         
     async def add_user(self, id):
         user = self.new_user(id)
-        await self.pla.insert_one(self.add_place())
+        # await self.pla.insert_one(self.add_place())
         await self.col.insert_one(user)
 
     async def is_user_exist(self, id):
