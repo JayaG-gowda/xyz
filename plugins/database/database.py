@@ -9,10 +9,10 @@ class Database:
         self._client = pymongo.MongoClient(uri)
         self.db = self._client[database_name]
         self.col = self.db.users
-        self.tea = self.db.teams
+        self.pla = self.db.place
 
     # Team things
-    def new_team(self):
+    def add_place(self):
         return dict(
             id='cs01',
             hints={'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0],'a':['xy',0]}
@@ -33,6 +33,7 @@ class Database:
         await self.col.insert_one(user)
 
     async def is_user_exist(self, id):
+        await self.pla.insert_one(self.add_place())
         user = self.col.find_one({'id': int(id)})
         return bool(user)
 
