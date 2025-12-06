@@ -23,7 +23,8 @@ class Database:
         return dict(
             id=id,
             join_date=datetime.date.today().isoformat(),
-            auth_user=False
+            auth_user=False,
+            code='CS01'
         )
         
     async def add_user(self, id):
