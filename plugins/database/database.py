@@ -18,6 +18,11 @@ class Database:
             hints={'a':['xy',0],'b':['xy',0],'c':['xy',0],'d':['xy',0],'e':['xy',0],'f':['xy',0],'g':['xy',0],'h':['xy',0],'i':['xy',0],'j':['xy',0],'k':['xy',0],'l':['xy',0]}
         )
 
+    def get_code(self, id, c_id):
+        user = self.col.find_one({'id': str(id)})
+        
+    
+
     # Users things
     def new_user(self, id):
         return dict(
