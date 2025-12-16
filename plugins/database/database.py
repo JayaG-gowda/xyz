@@ -12,17 +12,10 @@ class Database:
         self.pla = self.db.place
 
     # Team things
-    def add_place(self):
-        return dict(
-            id='CS01',
-            hints={'a':['xy',0],'b':['xy',0],'c':['xy',0],'d':['xy',0],'e':['xy',0],'f':['xy',0],'g':['xy',0],'h':['xy',0],'i':['xy',0],'j':['xy',0],'k':['xy',0],'l':['xy',0]}
-        )
-
-    def get_code(self, id, c_id):
-        user = self.col.find_one({'id': str(id)})
-        
+    def get_code(self, key):
+        user = self.pla.find_one({'id': str(key)})
+        return user
     
-
     # Users things
     def new_user(self, id):
         return dict(
