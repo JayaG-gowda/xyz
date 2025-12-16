@@ -15,6 +15,14 @@ from config import *
 from Script import script
 from plugins.database.database import db
 
+ids={
+    5092726834:['','Sumathi'],
+    5049943931:['','Manjula'],
+    1187985752:['CS01','Athishay'],
+    5864451133:['CS02','Harshitha'],
+    1061576483:['CS01','CS02','CS03','CS04','CS05','CS06','CS07','CS08','CS09','CS10','Jay']
+ }
+
 @Client.on_message(filters.command('get') & filters.private & filters.user(Config.AUTH_USERS))
 async def add_auth(bot, update):
     id = update.from_user.id
@@ -22,14 +30,25 @@ async def add_auth(bot, update):
     if len(cmd) == 1:
         await update.reply(text = "Invalid Syntax, send the command properly.\nExample: <code>/get ABC1234</code> \nABC1234 - unique code which is on the paper and it should be case sensitive")
     elif len(cmd) == 2:
-        try:
-            global code_id
-            code_id = str(cmd[1].strip())
+        for i in range(len(ids)):
+            if(id==list(ids.keys())[i]):
+                key=ids[list(ids.keys())[i]][0]
+                name=ids[list(ids.keys())[i]][-1]
+                break;
+                
+        code_id = str(cmd[1].strip())
+        user = db.get_code(key)
+        output='0'
+        for i in range(len(user['hints'])):
+            if(code_id==list(user['hints'].keys())[i]):
+                output=user["hints"][list(user["hints"].keys())[i]][0]
+                break;
+            else:
+                output='0'
+        if(output!='0'):
+            await update.reply_text(text = f"Congratulations!! you araived to the right place🎉🤩\nHere is your next hint string is <b><i>{output}</i></b> \n\nHey committie member you just invest minimum 10min and maximum 15min of their time.\nIf they choose program part instead of fun activity then don't allow them to go untill they pinish all the program, if it will take till evning😠.\n\nVerified by - {name}")
+        else:
+            await update.reply_text(text = f"<b>Sorry guys you araived to wrong destination😱.\n\n</b>")
             
-            o_code_id = 
-
-          
-            await update.reply_text(text = f"<b>Do You Want To Add The Given [User](tg://user?id={auth_id}) To An Auth User.\nClick Below Button Confirm 👇</b>",
-                                      disable_web_page_preview=True, reply_markup=Config.AUTH_ADD_BUTTONS, quote=True)
-        except:
-            await update.reply(text = "Invalid Code, it may be case sensitive or wrong, please chech again and resend.")
+        # except:
+        #     await update.reply(text = "Something went wrong please contact the admin - 9019646305.")
