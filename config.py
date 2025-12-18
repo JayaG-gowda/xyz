@@ -16,10 +16,7 @@ class tuple_(object):
 
 class Config(object):
 
-    #BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "1865366440:AAEzQuAZcw5t8F9JdBgSqe5aHMHOGD7eTfg") #testing bot 1 (mj btn)
-    #BOT_TOKEN = os.environ.get("BOT_TOKEN", "5872747581:AAHVN_3OP9uffBCKdesYZXFigzVuRYWLYOY") #testing bot 2 (url_v3)
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8591649046:AAHU9-5PRQpDcVvaHtOsVWdkCCjhXwlTkkE") 
     
     API_ID = int(os.environ.get("API_ID", "3393749"))
 
@@ -37,7 +34,7 @@ class Config(object):
 
     DOWNLOAD_LOCATION = "./DOWNLOADS"
 
-    # LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002315747115"))
     
     #DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))
 
