@@ -16,11 +16,11 @@ from Script import script
 from plugins.database.database import db
 
 ids={
-    5092726834:['CS01','Sumathi'],
-    5049943931:['CS01','Manjula'],
-    1827457712:['CS01','Veda'],
-    5068888843:['CS01','Rekha'],
-    7601081539:['CS01','Keerthi'],
+    5092726834:['CS02','Sumathi'],
+    5049943931:['CS06','Manjula'],
+    1827457712:['CS03','Veda'],
+    5068888843:['CS09','Rekha'],
+    7601081539:['CS07','Keerthi'],
     1187985752:['CS01','Athishay'],
     5864451133:['CS01','Harshitha'],
     1061576483:['CS01','CS02','CS03','CS04','CS05','CS06','CS07','CS08','CS09','CS10','Jay']
