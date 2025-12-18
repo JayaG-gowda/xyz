@@ -14,7 +14,19 @@ from bot import Bot
 from config import *
 from Script import script
 from plugins.database.database import db
-
+ps={
+  'CS01':'',
+  'CS02':'',
+  'CS03':'',
+  'CS04':'',
+  'CS05':'',
+  'CS06':'',
+  'CS07':'',
+  'CS08':'',
+  'CS09':'',
+  'CS010':'',
+  'CS011':'',
+}
 ids={
     5092726834:['CS02','Sumathi'],
     5049943931:['CS06','Manjula'],
@@ -37,12 +49,16 @@ async def add_auth(bot, update):
             if(id==list(ids.keys())[i]):
                 key=ids[list(ids.keys())[i]][0]
                 name=ids[list(ids.keys())[i]][-1]
-                p=
                 break;
                 
         code_id = str(cmd[1].strip())
         user = db.get_code(key)
         output='0'
+        p=user['id']
+        for i in range(len(ps)):
+            if(p==list(ids.keys())[i]):
+                pl=ps[list(ps.keys())[i]]
+              
         for i in range(len(user['hints'])):
             if(code_id==list(user['hints'].keys())[i]):
                 output=user["hints"][list(user["hints"].keys())[i]][0]
@@ -51,9 +67,9 @@ async def add_auth(bot, update):
                 output='0'
         if(output!='0'):
             await update.reply_text(text = f"Congratulations!! you arrived to the right place🎉🤩\nHere is your next hint string is <b><i>{output}</i></b> \n\nHey committie member you just invest minimum 10min and maximum 15min of their time.\nIf they choose program part instead of fun activity then don't allow them to go untill they pinish all the program, if it will take till evning😠.\n\nVerified by - {name}")
-            await bot.send_message(Config.LOG_CHANNEL, f"Congratulations!! you arrived to the right place🎉🤩\nHere is your next hint string is <b><i>{output}</i></b> \n\nHey committie member you just invest minimum 10min and maximum 15min of their time.\nIf they choose program part instead of fun activity then don't allow them to go untill they pinish all the program, if it will take till evning😠.\n\n<b>Verified from - {p}\nVerified by - {name}<\b>")
+            await bot.send_message(Config.LOG_CHANNEL, f"Congratulations!! you arrived to the right place🎉🤩\nHere is your next hint string is <b><i>{output}</i></b> \n\nHey committie member you just invest minimum 10min and maximum 15min of their time.\nIf they choose program part instead of fun activity then don't allow them to go untill they pinish all the program, if it will take till evning😠.\n\n<b>Verified from - {pl}\nVerified by - {name}<\b>")
         else:
             await update.reply_text(text = f"<b>Sorry guys you arrived to wrong destination😱.\n\nVerified by - {name}</b>")
-            await bot.send_message(Config.LOG_CHANNEL, f"<b>Sorry guys you arrived to wrong destination😱.\n\nVerified from - {p}\nVerified by - {name}</b>")
+            await bot.send_message(Config.LOG_CHANNEL, f"<b>Sorry guys you arrived to wrong destination😱.\n\nVerified from - {pl}\nVerified by - {name}</b>")
         # except:
         #     await update.reply(text = "Something went wrong please contact the admin - 9019646305.")
