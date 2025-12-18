@@ -27,7 +27,7 @@ class Config(object):
 
     OWNER_ID = int(os.environ.get("OWNER_ID", "1061576483")) #me legend580
     
-    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1187985752 5092726834 5049943931 5864451133").split())
+    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "5092726834 5049943931 1827457712 5068888843 7601081539 1187985752 5864451133 1061576483").split())
 
     AUTH_USERS = list(AUTH_USERS)
     
