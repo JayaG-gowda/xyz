@@ -65,11 +65,11 @@ async def add_auth(bot, update):
                 break;
             else:
                 output='0'
-        if(output!='0'):
-            await update.reply_text(text = f"Congratulations!! you arrived to the right place🎉🤩\nHere is your next hint string is <b><i>{output}</i></b> \n\nHey committie member you just invest minimum 10min and maximum 15min of their time.\nIf they choose program part instead of fun activity then don't allow them to go untill they pinish all the program, if it will take till evning😠.\n\nVerified by - {name}")
-            await bot.send_message(Config.LOG_CHANNEL, f"Congratulations!! you arrived to the right place🎉🤩\nHere is your next hint string is <b><i>{output}</i></b> \n\nHey committie member you just invest minimum 10min and maximum 15min of their time.\nIf they choose program part instead of fun activity then don't allow them to go untill they pinish all the program, if it will take till evning😠.\n\n<b>Verified from - {pl}\nVerified by - {name}<\b>")
+        if(output!='0'): 
+            await update.reply_text(text = f"Output string is <b><i>{output}</i></b> \n\n\nHey committee member you can go ahead and conduct activities for 12 mins not more not less.\nThe time consideration is only for fun activities, if they choose to solve code then, they have to finish the complete set of codes to proceed forward. If they do not solve the code they should be held there until they finish 😠.\n\nVerified by - {name}")
+            await bot.send_message(Config.LOG_CHANNEL, f"Output string is <b><i>{output}</i></b> \n\n\nHey committee member you can go ahead and conduct activities for 12 mins not more not less.\nThe time consideration is only for fun activities, if they choose to solve code then, they have to finish the complete set of codes to proceed forward. If they do not solve the code they should be held there until they finish 😠\n\n<b>Verified from - {pl}\nVerified by - {name}<\b>")
         else:
-            await update.reply_text(text = f"<b>Sorry guys you arrived to wrong destination😱.\n\nVerified by - {name}</b>")
-            await bot.send_message(Config.LOG_CHANNEL, f"<b>Sorry guys you arrived to wrong destination😱.\n\nVerified from - {pl}\nVerified by - {name}</b>")
+            await update.reply_text(text = f"<b>Sorry guys you are at the wrong place 😱.\n\nVerified by - {name}</b>")
+            await bot.send_message(Config.LOG_CHANNEL, f"<b>Sorry guys you are at the wrong place 😱.\n\nVerified from - {pl}\nVerified by - {name}</b>")
         # except:
         #     await update.reply(text = "Something went wrong please contact the admin - 9019646305.")
